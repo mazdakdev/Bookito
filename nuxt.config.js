@@ -14,7 +14,8 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    'assets/css/bootstrap.min.css',
+
+    'assets/css/tailwind.css',
  
   ],
 
@@ -38,6 +39,7 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+    '@nuxtjs/tailwindcss',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -48,6 +50,8 @@ export default {
     '@nuxtjs/pwa',
     '@nuxtjs/auth',
     '@nuxtjs/toast',
+  
+
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
