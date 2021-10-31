@@ -3,34 +3,44 @@
   <header>
 
   <!-- Start navbar -->
-    <nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6">
-      <div class="flex items-center flex-shrink-0 text-white mr-6">
-        <span class="font-semibold text-4xl tracking-tight"><i>Bookito</i> &nbsp; <i>!</i> </span>
-      </div>
-      <div class="block lg:hidden">
-        <button class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
-          <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
-        </button>
-      </div>
-      <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-        <div class=" lg:flex-grow ml-16 ">
-                    
-          <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-xl text-white mr-8  ">
-            Home
-            
-          </a>
+   <nav class="navbar navbar-expand-lg navbar-dark mg  " style="margin-top:-20px">
+      <a class="navbar-brand" href="#" >
+        <h1><i>Bookito !</i></h1>
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarCollapse"
+        aria-controls="navbarCollapse"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-          <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0  text-xl text-white mr-8  ">
-            Books
-          </a>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Books</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About us</a>
+          </li>
+          <li class="nav-item">
+            <router-link class="nav-link" to="/auth">Login</router-link>
+          </li>  <li class="nav-item">
+            <router-link class="nav-link" to="/Reg">Register</router-link>
+          </li>
+       
 
-          <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-xl text-white">
-            About us
-          </a>
-
-        </div>
+        </ul>
       </div>
     </nav>
+
 <!-- End navbar -->
 
 <section>
@@ -47,7 +57,7 @@
       </div>
       
       <div class="flex-1 m-t">
-        <nuxt-link to="#" class="bg-white text-black   py-4 px-8 rounded-full  ">
+        <nuxt-link to="#" class="bg-white text-black   py-4 px-8 rounded-full  " >
           All Books
        
         </nuxt-link>
@@ -69,9 +79,8 @@
 
 
 </template>
-
 <script>
-export default {};
+
 </script>
 
 <style lang="scss" scoped>
