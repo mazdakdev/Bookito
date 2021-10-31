@@ -12,12 +12,6 @@
     min-height: 100%;
 }
 
-.book{
-    width: 60%;
-    margin-left: 150px;
-    margin-top: 40px;
-}
-
 
 .slideInLeft {
   -webkit-animation-name: slideInLeft;
@@ -143,3 +137,19 @@
   transform: scale3d(1, 1, 1);
   }
   } 
+
+
+
+nav a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  box-sizing: border-box;
+  position: relative;
+  color: #f4f4f4;
+  box-sizing: border-box;
+  position: relative;
+  cursor: pointer;
+  outline: 0;
+  border: none;
+}
+
+
