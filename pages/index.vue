@@ -1,6 +1,11 @@
 <template>
   <div class="home">
     <header>
+      <div class=" text-white mr-6 lg:hidden md:hidden absolute top-2 left-2">
+          <span class="font-semibold text-3xl tracking-tight">
+            <i>Bookito</i> &nbsp; <i>!</i>
+          </span>
+        </div>
       <!-- START navbar -->
       <nav class="lg:flex sm:flex items-center justify-between flex-wrap bg-teal-500 p-6 hidden ">
         <div class="flex items-center flex-shrink-0 text-white mr-6">
@@ -26,9 +31,9 @@
       <!-- END navbar -->
 
       <!-- START main of header -->
-      <section>
+      <section class="absolute top-24 left-3">
         <div class="flex  ">
-          <div class="flex-1 slideInLeft">
+          <div class="flex-1 slideInLeft ">
             <div class="flex flex-col text-center justify-center mt-52 xs:mt-32 space-y-7 " >
               <div class="flex-1 ">
                 <p class="text-white  lg:text-5xl text-3xl sm:text-6xl ">
@@ -52,7 +57,7 @@
             </div>
           </div>
           <div class="flex-1 ">
-            <img id="book" src="../assets/header-img.png" class="book position-absolute zoomInDown sm:mt-64 lg:w-3/5 lg:ml-48 lg:mt-5  xs:mt-32 "  alt="Book" />
+            <img id="book" src="../assets/header-img.png" class="book zoomInDown  lg:w-3/5 lg:ml-48 lg:mt-5 md:mt-10 xs:mt-32 "  alt="Book" />
           </div>
         </div>
       </section>
@@ -60,8 +65,8 @@
 
       <!-- START of Mobile nav -->
 
-      <div class="xs:flex items-center  w-10/12 rounded-full flex-wrap bg-teal-500 p-6 lg:hidden sm:hidden md:hidden absolute bottom-3 left-8 bg-purple-800  ">
-        <div class="flex-grow flex items-center w-auto ">
+      <div class="xs:flex items-center  w-10/12 rounded-full flex-wrap  p-6 lg:hidden sm:hidden md:hidden absolute bottom-5 mt-5  left-8 bg-purple-800 ">
+        <div class="flex-grow flex items-center w-auto justify-center  ">
           <div class="flex-grow  ">
 
             <a href="#responsive-header" class=" inline-block mt-0 xs:text-2xl   text-white ml-10 ">
@@ -78,7 +83,7 @@
       <!-- END -->
 
   </header>
-     
+    
   
   </div>
 </template>
