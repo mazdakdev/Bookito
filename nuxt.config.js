@@ -53,6 +53,7 @@ export default {
     '@nuxtjs/pwa',
     '@nuxtjs/auth',
     '@nuxtjs/toast',
+
     
   
 

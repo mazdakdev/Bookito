@@ -43,9 +43,11 @@
               </div>
 
               <div class="flex-1">
-                <div class=" text-white text-sm sm:text-xl xs:text-xl">
-                  
-             
+                <p class=" text-white text-sm sm:text-xl xs:text-xl">
+                  welcome to your own book library all the books are organized
+                  <br />
+                  just the way you like
+                </p>
               </div>
 
               <div class="flex-1 ">
@@ -85,7 +87,7 @@
   <br>
   
   <section class="secbg">
-g
+
   </section>
   
   </div>
