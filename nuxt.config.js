@@ -31,6 +31,7 @@ export default {
       src: 'assets/jquery-3.6.0.min.js',
       src: 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js',
       src: 'assets/js/bootstrap.min.js',
+      src: 'assets/js/typewrite.js',
       
       }
     ],
@@ -52,6 +53,7 @@ export default {
     '@nuxtjs/pwa',
     '@nuxtjs/auth',
     '@nuxtjs/toast',
+    
   
 
   ],

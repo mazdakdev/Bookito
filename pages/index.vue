@@ -31,22 +31,21 @@
       <!-- END navbar -->
 
       <!-- START main of header -->
-      <section class="absolute top-24 left-3">
+      <div class=" absolute top-24 left-3">
         <div class="flex  ">
           <div class="flex-1 slideInLeft ">
             <div class="flex flex-col text-center justify-center mt-52 xs:mt-32 space-y-7 " >
               <div class="flex-1 ">
                 <p class="text-white  lg:text-5xl text-3xl sm:text-6xl ">
                   All the books you want
+  
                 </p>
               </div>
 
               <div class="flex-1">
-                <p class=" text-white text-sm sm:text-xl xs:text-xl">
-                  welcome to your own book library all the books are organized
-                  <br />
-                  just the way you like
-                </p>
+                <div class=" text-white text-sm sm:text-xl xs:text-xl">
+                  
+             
               </div>
 
               <div class="flex-1 ">
@@ -59,8 +58,8 @@
           <div class="flex-1 ">
             <img id="book" src="../assets/header-img.png" class="book zoomInDown  lg:w-3/5 lg:ml-48 lg:mt-5 md:mt-10 xs:mt-32 "  alt="Book" />
           </div>
-        </div>
-      </section>
+
+      </div>
       <!-- END main of header -->
 
       <!-- START of Mobile nav -->
@@ -81,14 +80,26 @@
         </div>
       </div>
       <!-- END -->
-
+      </div>
   </header>
-    
+  <br>
+  
+  <section class="secbg">
+g
+  </section>
   
   </div>
 </template>
 <script>
-export default {};
+import VueTypedJs from 'vue-typed-js';
+export default {
+  data() {
+    return {
+      
+    };
+  },
+ 
+};
 </script>
 
 <style lang="scss" scoped></style>

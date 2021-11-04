@@ -22,7 +22,8 @@
     "nuxt-fontawesome": "^0.4.0",
     "postcss": "^8.3.11",
     "sass-loader": "^10",
-    "tailwindcss": "^2.2.19"
+    "tailwindcss": "^2.2.19",
+    "vue-typed-js": "^0.1.2"
   },
   "devDependencies": {
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
