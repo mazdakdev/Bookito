@@ -15,6 +15,7 @@
     "@nuxtjs/pwa": "^3.3.5",
     "@nuxtjs/tailwindcss": "^4.2.1",
     "@nuxtjs/toast": "^3.3.1",
+    "@tailwindcss/typography": "^0.4.1",
     "autoprefixer": "^10.4.0",
     "core-js": "^3.9.1",
     "node-sass": "^6.0.0",
@@ -23,7 +24,8 @@
     "postcss": "^8.3.11",
     "sass-loader": "^10",
     "tailwindcss": "^2.2.19",
-    "vue-typed-js": "^0.1.2"
+    "vue-typed-js": "^0.1.2",
+    "vue-typer": "^1.2.0"
   },
   "devDependencies": {
     "@fortawesome/free-brands-svg-icons": "^5.15.4",

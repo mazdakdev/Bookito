@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <header>
+    
       <div class=" text-white mr-6 lg:hidden md:hidden absolute top-2 left-2">
           <span class="font-semibold text-3xl tracking-tight">
             <i>Bookito</i> &nbsp; <i>!</i>
@@ -33,17 +34,17 @@
       <!-- START main of header -->
       <div class=" absolute top-24 left-3">
         <div class="flex  ">
-          <div class="flex-1 slideInLeft ">
+          <div class="flex-1 slideInLeft ml-1">
             <div class="flex flex-col text-center justify-center mt-52 xs:mt-32 space-y-7 " >
               <div class="flex-1 ">
-                <p class="text-white  lg:text-5xl text-3xl sm:text-6xl ">
-                  All the books you want
+           
+                  <vue-typer text="All the books you want"  ></vue-typer>
   
-                </p>
               </div>
 
               <div class="flex-1">
                 <p class=" text-white text-sm sm:text-xl xs:text-xl">
+                  
                   welcome to your own book library all the books are organized
                   <br />
                   just the way you like
@@ -57,16 +58,17 @@
               </div>
             </div>
           </div>
-          <div class="flex-1 ">
+          <div class="flex-1 mr-1 ">
             <img id="book" src="../assets/header-img.png" class="book zoomInDown  lg:w-3/5 lg:ml-48 lg:mt-5 md:mt-10 xs:mt-32 "  alt="Book" />
           </div>
 
+      </div>
       </div>
       <!-- END main of header -->
 
       <!-- START of Mobile nav -->
 
-      <div class="xs:flex items-center  w-10/12 rounded-full flex-wrap  p-6 lg:hidden sm:hidden md:hidden absolute bottom-5 mt-5  left-8 bg-purple-800 ">
+      <div class="xs:flex items-center  w-10/12 rounded-full flex-wrap  p-6 lg:hidden sm:hidden md:hidden absolute bottom-5 mt-10 shadow-md  left-8 bg-purple-800 ">
         <div class="flex-grow flex items-center w-auto justify-center  ">
           <div class="flex-grow  ">
 
@@ -82,18 +84,52 @@
         </div>
       </div>
       <!-- END -->
-      </div>
-  </header>
-  <br>
-  
-  <section class="secbg">
+ 
+    </header>
 
-  </section>
-  
+    <!-- START of second page -->
+    
+
+    
+
+    <section class="secbg">
+      <div class="flex">
+
+        <div class="flex-1">
+          <div class="flex flex-col ml-96 mt-24 ">
+            <div class="flex-1">
+              <p class="text-5xl ">The Girl you forgot</p>
+            </div>
+
+            <div class="flex-1">
+              <p class="text-gray-600 mt-5"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                <br> labore et dolore magna aliqua. Ut enim ad</p>
+            </div>
+           
+            <div class="flex-1 mt-7">
+          
+              <nuxt-link to="#" class="btnn py-3 px-14 rounded-full text-2xl ">Books</nuxt-link> 
+            </div>
+          </div>
+        </div>
+
+        <div class="flex-1">
+          <div class="z-0  w-2/6  right-5 top-10 absolute">
+            <img src="../assets/blob (1).svg" >
+          </div>
+          <img src="../assets/tbook.png"  class="w-2/5 z-10 absolute top-10 right-24 ">
+        </div>
+
+      </div>
+    </section>
+    <!-- END of second page -->
+
+
   </div>
+
 </template>
 <script>
-import VueTypedJs from 'vue-typed-js';
+
 export default {
   data() {
     return {
