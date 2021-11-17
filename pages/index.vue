@@ -52,7 +52,7 @@
               </div>
 
               <div class="flex-1 ">
-                <nuxt-link to="#" class="bg-white text-black   sm:text-2xl lg:text-xl lg:py-4 lg:px-7 py-4 px-8 xs:py-4 xs:px-7  rounded-full ">
+                <nuxt-link to="/Allbooks" class="bg-white text-black   sm:text-2xl lg:text-xl lg:py-4 lg:px-7 py-4 px-8 xs:py-4 xs:px-7  rounded-full ">
                  All the books
                 </nuxt-link>
               </div>
@@ -90,38 +90,6 @@
     <!-- START of second page -->
     
 
-    
-
-    <section class="secbg">
-      <div class="flex">
-
-        <div class="flex-1">
-          <div class="flex flex-col ml-96 mt-24 ">
-            <div class="flex-1">
-              <p class="text-5xl ">The Girl you forgot</p>
-            </div>
-
-            <div class="flex-1">
-              <p class="text-gray-600 mt-5"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                <br> labore et dolore magna aliqua. Ut enim ad</p>
-            </div>
-           
-            <div class="flex-1 mt-7">
-          
-              <nuxt-link to="#" class="btnn py-3 px-14 rounded-full text-2xl ">Books</nuxt-link> 
-            </div>
-          </div>
-        </div>
-
-        <div class="flex-1">
-          <div class="z-0  w-2/6  right-5 top-10 absolute">
-            <img src="../assets/blob (1).svg" >
-          </div>
-          <img src="../assets/tbook.png"  class="w-2/5 z-10 absolute top-10 right-24 ">
-        </div>
-
-      </div>
-    </section>
     <!-- END of second page -->
 
 

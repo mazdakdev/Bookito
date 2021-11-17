@@ -23,6 +23,7 @@
     "nuxt-fontawesome": "^0.4.0",
     "postcss": "^8.3.11",
     "sass-loader": "^10",
+    "tailwind-bootstrap-grid": "^4.0.0",
     "tailwindcss": "^2.2.19",
     "vue-typed-js": "^0.1.2",
     "vue-typer": "^1.2.0"
