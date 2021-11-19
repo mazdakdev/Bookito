@@ -4,26 +4,26 @@
     
       <div class=" text-white mr-6 lg:hidden md:hidden absolute top-2 left-2">
           <span class="font-semibold text-3xl tracking-tight">
-            <i>Bookito</i> &nbsp; <i>!</i>
+            <nuxt-link to="/"><i>Bookito</i> &nbsp; <i>!</i></nuxt-link>
           </span>
         </div>
       <!-- START navbar -->
       <nav class="lg:flex sm:flex items-center justify-between flex-wrap bg-teal-500 p-6 hidden ">
         <div class="flex items-center flex-shrink-0 text-white mr-6">
           <span class="font-semibold text-4xl tracking-tight">
-            <i>Bookito</i> &nbsp; <i>!</i>
+            <nuxt-link to="/"><i>Bookito</i> &nbsp; <i>!</i></nuxt-link>
           </span>
         </div>
 
         <div class="  flex-grow flex items-center w-auto ">
           <div class="flex-grow  ">
-            <a href="#responsive-header" class=" inline-block mt-0 sm:text-3xl   lg:text-xl text-white ml-10 ">
+            <nuxt-link to="/" class=" inline-block mt-0 sm:text-3xl   lg:text-xl text-white ml-10 ">
               Home
-            </a>
+            </nuxt-link>
 
-            <a href="#responsive-header" class="  inline-block mt-0 sm:text-3xl   lg:text-xl text-white ml-14 ">
+            <nuxt-link to="/Allbooks" class="  inline-block mt-0 sm:text-3xl   lg:text-xl text-white ml-14 ">
               Books
-            </a>
+            </nuxt-link>
 
 
           </div>

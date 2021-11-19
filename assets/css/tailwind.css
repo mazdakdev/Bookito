@@ -1,186 +1,189 @@
-        @tailwind base;
-        @tailwind components;
-        @tailwind utilities;
-        header {
-            background-image: linear-gradient(#de2772, #f8493f);
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            /* Preserve aspet ratio */
-            width: 100%;
-            height: 100%;
-        }
-        
-        .slideInLeft {
-            -webkit-animation-name: slideInLeft;
-            animation-name: slideInLeft;
-            -webkit-animation-duration: 1s;
-            animation-duration: 1s;
-            -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
-        }
-        
-        @-webkit-keyframes slideInLeft {
-            0% {
-                -webkit-transform: translateX(-100%);
-                transform: translateX(-100%);
-                visibility: visible;
-            }
-            100% {
-                -webkit-transform: translateX(0);
-                transform: translateX(0);
-            }
-        }
-        
-        @keyframes slideInLeft {
-            0% {
-                -webkit-transform: translateX(-100%);
-                transform: translateX(-100%);
-                visibility: visible;
-            }
-            100% {
-                -webkit-transform: translateX(0);
-                transform: translateX(0);
-            }
-        }
-        
-        .zoomInDown {
-            -webkit-animation-name: zoomInDown;
-            animation-name: zoomInDown;
-            -webkit-animation-duration: 1s;
-            animation-duration: 1s;
-            -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
-        }
-        
-        @-webkit-keyframes zoomInDown {
-            0% {
-                opacity: 0;
-                -webkit-transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
-                transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
-                -webkit-animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
-                animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
-            }
-            60% {
-                opacity: 1;
-                -webkit-transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
-                transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
-                -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
-                animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
-            }
-        }
-        
-        @keyframes zoomInDown {
-            0% {
-                opacity: 0;
-                -webkit-transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
-                transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
-                -webkit-animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
-                animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
-            }
-            60% {
-                opacity: 1;
-                -webkit-transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
-                transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
-                -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
-                animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
-            }
-        }
-        
-        .tada:hover {
-            -webkit-animation-name: tada;
-            animation-name: tada;
-            -webkit-animation-duration: 1s;
-            animation-duration: 1s;
-            -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
-        }
-        
-        @-webkit-keyframes tada {
-            0% {
-                -webkit-transform: scale3d(1, 1, 1);
-                transform: scale3d(1, 1, 1);
-            }
-            10%,
-            20% {
-                -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
-                transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
-            }
-            30%,
-            50%,
-            70%,
-            90% {
-                -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
-                transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
-            }
-            40%,
-            60%,
-            80% {
-                -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
-                transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
-            }
-            100% {
-                -webkit-transform: scale3d(1, 1, 1);
-                transform: scale3d(1, 1, 1);
-            }
-        }
-        
-        @keyframes tada {
-            0% {
-                -webkit-transform: scale3d(1, 1, 1);
-                transform: scale3d(1, 1, 1);
-            }
-            10%,
-            20% {
-                -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
-                transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
-            }
-            30%,
-            50%,
-            70%,
-            90% {
-                -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
-                transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
-            }
-            40%,
-            60%,
-            80% {
-                -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
-                transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
-            }
-            100% {
-                -webkit-transform: scale3d(1, 1, 1);
-                transform: scale3d(1, 1, 1);
-            }
-        }
-        
-        nav a:hover {
-            background: rgba(255, 255, 255, 0.1);
-            box-sizing: border-box;
-            position: relative;
-            color: #f4f4f4;
-            box-sizing: border-box;
-            position: relative;
-            cursor: pointer;
-            outline: 0;
-            border: none;
-        }
-        
-        .vue-typer .custom.char.typed {
-            @apply text-white;
-            @apply text-5xl;
-        }
-        
-        .rt {
-            transform: rotate(90deg);
-        }
-        
-        .btnn {
-            background-image: linear-gradient(to right, #21D3F7, #25C79B);
-        }
-        
-        .whv:hover {
-            width: 90%;
-        }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+header {
+    background-image: linear-gradient(#de2772, #f8493f);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Preserve aspet ratio */
+    width: 100%;
+    height: 100%;
+}
+
+.slideInLeft {
+    -webkit-animation-name: slideInLeft;
+    animation-name: slideInLeft;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes slideInLeft {
+    0% {
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+        visibility: visible;
+    }
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+        visibility: visible;
+    }
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+.zoomInDown {
+    -webkit-animation-name: zoomInDown;
+    animation-name: zoomInDown;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes zoomInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
+        transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
+        -webkit-animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+        animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+    }
+    60% {
+        opacity: 1;
+        -webkit-transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+        transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+        -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+        animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+    }
+}
+
+@keyframes zoomInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
+        transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
+        -webkit-animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+        animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+    }
+    60% {
+        opacity: 1;
+        -webkit-transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+        transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+        -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+        animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+    }
+}
+
+.tada:hover {
+    -webkit-animation-name: tada;
+    animation-name: tada;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes tada {
+    0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+    10%,
+    20% {
+        -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+        transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+    }
+    30%,
+    50%,
+    70%,
+    90% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    }
+    40%,
+    60%,
+    80% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    }
+    100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes tada {
+    0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+    10%,
+    20% {
+        -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+        transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+    }
+    30%,
+    50%,
+    70%,
+    90% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    }
+    40%,
+    60%,
+    80% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    }
+    100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    box-sizing: border-box;
+    position: relative;
+    color: #f4f4f4;
+    box-sizing: border-box;
+    position: relative;
+    cursor: pointer;
+    outline: 0;
+    border: none;
+}
+
+.vue-typer .custom.char.typed {
+    @apply text-white;
+    @apply text-5xl;
+}
+
+.rt {
+    transform: rotate(90deg);
+}
+
+.btnn {
+    background-image: linear-gradient(to right, #21D3F7, #25C79B);
+}
+
+.overlay {
+    @apply w-48;
+    @apply h-64;
+    position: fixed;
+    background: linear-gradient(to right, rgb(60, 13, 20) 3px, rgba(255, 255, 255, 0.5) 5px, rgba(255, 255, 255, 0.25) 7px, rgba(255, 255, 255, 0.25) 10px, transparent 12px, transparent 16px, rgba(255, 255, 255, 0.25) 17px, transparent 22px);
+}
