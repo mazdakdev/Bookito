@@ -187,3 +187,19 @@ nav a:hover {
     position: fixed;
     background: linear-gradient(to right, rgb(60, 13, 20) 3px, rgba(255, 255, 255, 0.5) 5px, rgba(255, 255, 255, 0.25) 7px, rgba(255, 255, 255, 0.25) 10px, transparent 12px, transparent 16px, rgba(255, 255, 255, 0.25) 17px, transparent 22px);
 }
+
+.overlay:hover {
+    @apply w-56;
+    @apply h-72;
+}
+
+.overlaysingle {
+    @apply w-56;
+    @apply h-72;
+    position: fixed;
+    background: linear-gradient(to right, rgb(60, 13, 20) 3px, rgba(255, 255, 255, 0.5) 5px, rgba(255, 255, 255, 0.25) 7px, rgba(255, 255, 255, 0.25) 10px, transparent 12px, transparent 16px, rgba(255, 255, 255, 0.25) 17px, transparent 22px);
+}
+
+.rtt {
+    transform: rotate(-5deg);
+}

@@ -36,7 +36,7 @@
         </div>
       </div>
 
-      <nav class="flex items-center justify-between flex-wrap w-auto text-center">
+      <nav class=" items-center justify-between flex-wrap w-auto text-center hidden lg:flex">
 
         <div class="  flex-grow flex items-center  w-auto ">
           <div class="flex-grow ">
@@ -48,10 +48,7 @@
               Books
             </nuxt-link>
 
-            <nuxt-link to="About" class="  inline-block mt-0    lg:text-base text-gray-500 hover:text-indigo-600  ml-14 ">
-              About
-            </nuxt-link>
-
+   
           </div>
         </div>
       </nav>
