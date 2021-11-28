@@ -32,6 +32,7 @@
         </div>
 
         <div class=" w-11/12 ml-4  text-left mt-52 lg:hidden">
+
             <div class="bg-white rounded-md overflow-hidden relative   shadow-md">
                 <div class="p-4">
                     <h2 class="text-2xl text-green-500">Book title</h2>
