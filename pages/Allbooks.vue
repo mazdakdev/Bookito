@@ -26,7 +26,9 @@
 
     <div class=" flex items-center justify-center mt-52 lg:hidden " >
 
-      <Book img="https://images-na.ssl-images-amazon.com/images/I/51pnouuPO5L.jpg" class="" author="Steve Krug" title="Dont make me think"></Book>
+        <nuxt-link to="Singlebook">
+          <Book img="https://images-na.ssl-images-amazon.com/images/I/51pnouuPO5L.jpg" author="Steve Krug" title="Dont make me think"></Book>
+        </nuxt-link>
 
     </div>
 
