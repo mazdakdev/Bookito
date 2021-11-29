@@ -1,0 +1,4 @@
+Django
+djangorestframework
+knox
+djnago-rest-knox
