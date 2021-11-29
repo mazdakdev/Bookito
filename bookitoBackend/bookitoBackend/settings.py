@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'User',
     'knox',
-    'rest_framework'
+    'rest_framework',
+    'books'
     
 ]
 
