@@ -10,7 +10,7 @@ urlpatterns = [
     path("create-author/" , views.create_author , name="create.author"),
     path("read-authors/" , views.get_authors , name="read.author"),
     path("update-author/<int:id>" , views.update_author , name="update.author"),
-    path("delete-author/<int:id>" , views.delete_category , name="delete.author"),
+    path("delete-author/<int:id>" , views.delete_author , name="delete.author"),
 
 ]
 

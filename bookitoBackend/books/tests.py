@@ -69,8 +69,52 @@ class DeleteCategoryTestCase(APITestCase):
         self.assertEqual(response_.status_code , status.HTTP_200_OK)
 
 
+class CreateAuthorTestCase(APITestCase):
+    def test_add_Author(self):
+        user = User.objects.create_superuser('admin', 'admin@example.com')
+        self.client.force_authenticate(user)
+        response = self.client.get(reverse("user"))
+
+        self.assertEqual(response.status_code , status.HTTP_200_OK)
+        token = AuthToken.objects.create(user)
+
+        self.client.credentials(Authorization=f'Token {token}')
+        response_author = self.client.post(reverse("create.author") , {'name':'TestAuthor'})
+        self.assertEqual(response_author.status_code , status.HTTP_201_CREATED)
 
 
 
 
-        
+class UpdateAuthorTestCase(APITestCase):
+    def test_update_Author(self):
+        user = User.objects.create_superuser('admin', 'admin@example.com')
+        self.client.force_authenticate(user)
+        response = self.client.get(reverse("user"))
+
+        self.assertEqual(response.status_code , status.HTTP_200_OK)
+        token = AuthToken.objects.create(user)
+        self.client.credentials(Authorization=f'Token {token}')
+        response_author = self.client.post(reverse("create.author") , {'name':'TestAuthor'})
+        self.assertEqual(response_author.status_code , status.HTTP_201_CREATED)
+
+        response_ = self.client.put(reverse("update.author" , kwargs={'id':1}) ,{'name':'TestAuthorEdited'} )
+        name = json.loads(response_.content)["name"]
+        self.assertEqual(name , "TestAuthorEdited" )
+
+
+
+class DeleteAuthorTestCase(APITestCase):
+    def test_delete_author(self):
+        user = User.objects.create_superuser('admin', 'admin@example.com')
+        self.client.force_authenticate(user)
+        response = self.client.get(reverse("user"))
+
+        self.assertEqual(response.status_code , status.HTTP_200_OK)
+        token = AuthToken.objects.create(user)
+        self.client.credentials(Authorization=f'Token {token}')
+        response_author = self.client.post(reverse("create.author") , {'name':'TestAuthor'})
+        self.assertEqual(response_author.status_code , status.HTTP_201_CREATED)
+
+        response_ = self.client.delete(reverse("delete.author" , kwargs={"id" : 1}))
+        self.assertEqual(response_.status_code , status.HTTP_200_OK)
+

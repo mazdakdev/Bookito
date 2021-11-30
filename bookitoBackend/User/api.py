@@ -2,7 +2,7 @@ from django.contrib import auth
 from rest_framework import generics, permissions, serializers
 from rest_framework.response import Response
 from knox.models import AuthToken
-from .serializers import UserSerializer, RegisterSerializer, LoginSerializer
+from .serializers import UserSerializer, RegisterSerializer, LoginSerializer 
 from rest_framework import status
 from django.contrib.contenttypes.models import ContentType
 from django.contrib.auth.models import Permission , User  , Group

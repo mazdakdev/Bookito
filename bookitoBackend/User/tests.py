@@ -1,12 +1,9 @@
-import json
-from re import S
+
 from django.contrib.auth.models import User
 from django.urls import reverse
 from rest_framework.test import APITestCase
 from rest_framework import status
 from .serializers import *
-#from rest_framework.authtoken.models import Token
-
 
 
 # Class to test registration method

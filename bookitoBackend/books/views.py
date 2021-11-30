@@ -87,7 +87,7 @@ def create_author(request):
 def get_authors(request):
     if request.method == 'GET':
         authors = Author.objects.all()
-        serializer = CategorySerializer(authors , many=True)
+        serializer = AuthorSerializer(authors , many=True)
         return Response(serializer.data)
     return Response("Something Went Wrong" , status=status.HTTP_400_BAD_REQUEST)
 
@@ -114,7 +114,7 @@ def delete_author(request , id):
     if request.method == 'DELETE':
         if request.user.has_perm("books.delete_author"):
             author = Author.objects.get(id=id)
-            Author.delete()
+            author.delete()
             return Response("Deleted successfully ! " )
         else:
             return Response("Sorry but you don't have permission to do this" , status=status.HTTP_403_FORBIDDEN )
