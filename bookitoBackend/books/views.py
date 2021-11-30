@@ -39,7 +39,7 @@ def get_categories(request):
 
 @permission_classes([permissions.IsAuthenticated])
 @api_view(['PUT'])
-def update_category(request):
+def update_category(request , id):
     if request.method == 'PUT':
         if request.user.has_perm("books.update_category"):
             category = Category.objects.get(id=id)
@@ -56,7 +56,7 @@ def update_category(request):
 
 @permission_classes([permissions.IsAuthenticated])
 @api_view(['DELETE'])
-def delete_category(request):
+def delete_category(request , id):
     if request.method == 'DELETE':
         if request.user.has_perm("books.delete_category"):
             category = Category.objects.get(id=id)
@@ -95,7 +95,7 @@ def get_authors(request):
 
 @permission_classes([permissions.IsAuthenticated])
 @api_view(['PUT'])
-def update_author(request):
+def update_author(request , id):
     if request.method == 'PUT':
         if request.user.has_perm("books.update_author"):
             author = Author.objects.get(id=id)
@@ -110,12 +110,12 @@ def update_author(request):
 
 @permission_classes([permissions.IsAuthenticated])
 @api_view(['DELETE'])
-def delete_author(request):
+def delete_author(request , id):
     if request.method == 'DELETE':
         if request.user.has_perm("books.delete_author"):
             author = Author.objects.get(id=id)
             Author.delete()
-            return Response("Deleted successfully ! ")
+            return Response("Deleted successfully ! " )
         else:
             return Response("Sorry but you don't have permission to do this" , status=status.HTTP_403_FORBIDDEN )
 
