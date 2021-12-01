@@ -2,6 +2,7 @@ from django.db.models import fields
 from rest_framework import permissions
 from rest_framework.serializers import ModelSerializer
 from .models import Book , Category , Author
+from User.serializers import UserSerializer
 
 class CategorySerializer(ModelSerializer):
     class Meta:
@@ -13,7 +14,7 @@ class AuthorSerializer(ModelSerializer):
         model = Author
         fields = ("id","name")
 
-class Book(ModelSerializer):
+class BookSerializer(ModelSerializer):
     class Meta:
         model = Book
-        fields = ("id" , "title" , "image", "price" , "author" , "category" , "description")
+        fields = ("id" , "title" , "image" , "author" , "category" , "pdf"  , "user_id" )

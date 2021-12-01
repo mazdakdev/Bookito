@@ -12,10 +12,12 @@ class Author(models.Model):
 class Book(models.Model):
     title = models.CharField(max_length=25)
     image = models.ImageField()
-    price = models.CharField(max_length=20)
-    author = models.ForeignKey(Author, models.CASCADE)
-    category = models.ForeignKey(Category, models.CASCADE)
-    description = models.TextField()
+    pdf = models.FileField(upload_to ='pdf/% Y/% m/% d/')
+    author = models.ForeignKey(Author, on_delete=models.CASCADE)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE )
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
 
     
