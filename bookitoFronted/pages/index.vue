@@ -72,13 +72,13 @@
         <div class="flex-grow flex items-center w-auto justify-center  ">
           <div class="flex-grow  ">
 
-            <a href="#responsive-header" class=" inline-block mt-0 xs:text-2xl   text-white ml-10 ">
+            <nuxt-link to="/" class=" inline-block mt-0 xs:text-2xl   text-white ml-10 ">
               Home
-            </a>
+            </nuxt-link>
 
-            <a href="#responsive-header" class="  inline-block mt-0 xs:text-2xl   text-white ml-14 ">
+            <nuxt-link to="/Allbooks" class="  inline-block mt-0 xs:text-2xl   text-white ml-14 ">
               Books
-            </a>
+            </nuxt-link>
 
           </div>
         </div>
