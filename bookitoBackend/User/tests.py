@@ -1,4 +1,3 @@
-
 from django.contrib.auth.models import User
 from django.urls import reverse
 from rest_framework.test import APITestCase
@@ -14,8 +13,6 @@ class CreateUserTestCase(APITestCase):
         url = reverse("register")
         response = self.client.post(url , data)
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
-
-
 
 class LoginUserTestCase(APITestCase):
     def test_login(self):

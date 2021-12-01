@@ -12,7 +12,7 @@ class Author(models.Model):
 class Book(models.Model):
     title = models.CharField(max_length=25)
     image = models.ImageField()
-    pdf = models.FileField(upload_to ='pdf/% Y/% m/% d/')
+    pdf = models.FileField(upload_to ='pdf/% Y/% m/% d/',blank=True)
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE )
