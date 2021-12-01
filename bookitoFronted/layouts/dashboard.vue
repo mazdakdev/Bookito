@@ -29,10 +29,11 @@
         </div>
 
         <div class="flex items-center w-auto">
-          <img src="../assets/heart (2).png" class="inline-block mr-7">
-          <img src="../assets/user.png" class="inline-block mr-7">
-  
+          <nuxt-link to="/login"><img src="../assets/user.png" class="inline-block mr-12"></nuxt-link>
           <!-- icon by flaticon.com -->
+          <div v-if="$auth.loggedIn">
+            <nuxt-link to="/profile" class="mr-5">{{ $auth.user.username }}</nuxt-link>
+          </div>
         </div>
       </div>
 

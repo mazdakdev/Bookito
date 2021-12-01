@@ -1,38 +1,38 @@
 {
-  "name": "bookstore",
-  "version": "1.0.0",
-  "private": true,
-  "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate"
-  },
-  "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.36",
-    "@nuxtjs/auth": "^4.9.1",
-    "@nuxtjs/axios": "^5.13.1",
-    "@nuxtjs/pwa": "^3.3.5",
-    "@nuxtjs/tailwindcss": "^4.2.1",
-    "@nuxtjs/toast": "^3.3.1",
-    "@tailwindcss/typography": "^0.4.1",
-    "@vue/composition-api": "^1.4.0",
-    "autoprefixer": "^10.4.0",
-    "core-js": "^3.9.1",
-    "hover.css": "^2.3.2",
-    "node-sass": "^6.0.0",
-    "nuxt": "^2.15.3",
-    "nuxt-fontawesome": "^0.4.0",
-    "postcss": "^8.3.11",
-    "sass-loader": "^10",
-    "tailwind-bootstrap-grid": "^4.0.0",
-    "tailwindcss": "^2.2.19",
-    "vue-typed-js": "^0.1.2",
-    "vue-typer": "^1.2.0"
-  },
-  "devDependencies": {
-    "@fortawesome/free-brands-svg-icons": "^5.15.4",
-    "@fortawesome/free-solid-svg-icons": "^5.15.4",
-    "@nuxtjs/fontawesome": "^1.1.2"
-  }
+    "name": "bookstore",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "dev": "nuxt",
+        "build": "nuxt build",
+        "start": "nuxt start",
+        "generate": "nuxt generate"
+    },
+    "dependencies": {
+        "@fortawesome/fontawesome-svg-core": "^1.2.36",
+        "@nuxtjs/auth": "^4.9.1",
+        "@nuxtjs/axios": "^5.13.1",
+        "@nuxtjs/pwa": "^3.3.5",
+        "@nuxtjs/tailwindcss": "^4.2.1",
+        "@nuxtjs/toast": "^3.3.1",
+        "@tailwindcss/typography": "^0.4.1",
+        "@vue/composition-api": "^1.4.0",
+        "autoprefixer": "^10.4.0",
+        "core-js": "^3.9.1",
+        "hover.css": "^2.3.2",
+        "node-sass": "^6.0.0",
+        "nuxt": "^2.15.3",
+        "nuxt-fontawesome": "^0.4.0",
+        "postcss": "^8.3.11",
+        "sass-loader": "^10",
+        "tailwind-bootstrap-grid": "^4.0.0",
+        "tailwindcss": "^2.2.19",
+        "vue-typed-js": "^0.1.2",
+        "vue-typer": "^1.2.0"
+    },
+    "devDependencies": {
+        "@fortawesome/free-brands-svg-icons": "^5.15.4",
+        "@fortawesome/free-solid-svg-icons": "^5.15.4",
+        "@nuxtjs/fontawesome": "^1.1.2"
+    }
 }

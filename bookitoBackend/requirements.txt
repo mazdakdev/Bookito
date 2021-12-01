@@ -4,3 +4,4 @@ knox
 djnago-rest-knox
 selenium
 Pillow
+django-cors-headers

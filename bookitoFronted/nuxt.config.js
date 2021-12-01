@@ -8,14 +8,14 @@ export default {
     target: 'server',
     // Global page headers: https://go.nuxtjs.dev/config-head
     head: {
-        title: 'bookstore',
+        title: 'Bookito',
         meta: [
             { charset: 'utf-8' },
             { name: 'viewport', content: 'width=device-width, initial-scale=1' },
             { hid: 'description', name: 'description', content: '' }
         ],
         link: [
-            { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+            { rel: 'icon', type: 'image/x-icon', href: '/icon.ico' }
         ]
     },
 
@@ -59,17 +59,36 @@ export default {
         '@nuxtjs/auth',
         '@nuxtjs/toast',
 
-
-
-
     ],
 
 
-
-
-
     // Axios module configuration: https://go.nuxtjs.dev/config-axios
-    axios: {},
+    axios: {
+        baseURL: 'http://127.0.0.1:8000/api/v1/'
+    },
+
+    auth: {
+        strategies: {
+            local: {
+                endpoints: {
+                    login: { url: 'login/', method: 'post', propertyName: 'token' },
+                    user: {
+                        url: 'user/',
+                        method: 'GET',
+                        propertyName: false
+                    },
+                    logout: { url: 'auth/logout', method: 'post' },
+                },
+                tokenType: "Token",
+                tokenName: "Authorization"
+            },
+            redirect: {
+                login: '/login',
+                home: '/Allbooks'
+
+            }
+        }
+    },
 
     // PWA module configuration: https://go.nuxtjs.dev/pwa
     pwa: {
@@ -85,27 +104,6 @@ export default {
         color: '#58fccb',
         background: 'white',
         height: '4px'
-    },
-    axios: {
-        baseURL: 'http://127.0.0.1:8000/api/v1/'
-    },
-    auth: {
-
-        strategies: {
-
-            local: {
-
-                endpoints: {
-
-                    login: { url: '/login/', method: 'post', propertyName: 'token' },
-
-                    user: { url: '/user/', method: 'get', propertyName: false },
-
-                    logout: false
-
-                }
-            }
-        }
     },
 
     toast: {

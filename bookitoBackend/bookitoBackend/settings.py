@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-4q5)x*3!8=+crfzu@9_3$zyw!ggr__*p3(8dq7r@=$j2)++9#j
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -40,13 +40,15 @@ INSTALLED_APPS = [
     'User',
     'knox',
     'rest_framework',
-    'books'
+    'books',
+    "corsheaders",
     
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    "corsheaders.middleware.CorsMiddleware",
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -55,7 +57,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'bookitoBackend.urls'
-
+CORS_ALLOW_ALL_ORIGINS = True
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
