@@ -6,7 +6,7 @@ from .serializers import UserSerializer, RegisterSerializer, LoginSerializer
 from rest_framework import status
 from django.contrib.contenttypes.models import ContentType
 from django.contrib.auth.models import Permission , User  , Group
-from books.models import Category , Author , Book
+from books.models import Book
 
 class SignUpAPI(generics.GenericAPIView):
     serializer_class = RegisterSerializer
@@ -15,12 +15,6 @@ class SignUpAPI(generics.GenericAPIView):
         serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         user = serializer.save()
-        user_perm = User.objects.get(id=user.id)
-
-        # restrict user from changing , deleting , adding Category & Author
-        content_type_category = ContentType.objects.get_for_model(Category)
-        permission_read_category = Permission.objects.get(codename='view_category',content_type=content_type_category)
-        user_perm.user_permissions.add(permission_read_category)
 
         token = AuthToken.objects.create(user)
         return Response({

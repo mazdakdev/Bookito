@@ -1411,7 +1411,7 @@
     defu "^5.0.0"
     postcss "^8.3.5"
     postcss-custom-properties "^11.0.0"
-    postcss-nesting "^8.0.1"
+    postcss-nesting "*"
     tailwind-config-viewer "^1.6.2"
     tailwindcss "^2.2.2"
     ufo "^0.7.5"

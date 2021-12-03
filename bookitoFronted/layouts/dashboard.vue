@@ -39,7 +39,7 @@
 
       <nav class=" items-center justify-between flex-wrap w-auto text-center hidden lg:flex">
 
-        <div class="  flex-grow flex items-center  w-auto ">
+        <div class="  flex-grow flex items-center  w-auto mr-20  ">
           <div class="flex-grow ">
             <nuxt-link to="/" class=" inline-block mt-0   lg:text-base text-gray-500 ml-10   hover:text-indigo-600">
               Home
