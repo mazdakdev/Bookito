@@ -6,12 +6,12 @@
             <Single v-else img="https://static.vecteezy.com/system/resources/previews/002/909/206/original/abstract-background-for-landing-pages-banner-placeholder-cover-book-and-print-geometric-pettern-on-screen-gradient-colors-design-vector.jpg"  class="absolute left-72 rtt z-10 top-72   mt-5 " ></Single>
         </div>
         <div class="w-full p-8 lg:w-3/4  ">
-          <form method="post" @submit.prevent="newBook">
+          <form method="post" @submit.prevent="editBook">
 
-            <p class="text-2xl text-gray-600 text-center">Add you'r Book </p>
+            <p class="text-2xl text-gray-600 text-center">Edit you'r Book </p>
             <div class="mt-4 flex items-center justify-between">
                 <span class="border-b w-1/5 lg:w-1/4"></span>
-                <p  class="text-xs text-center text-gray-500 uppercase">Complete form below</p>
+                <p  class="text-xs text-center text-gray-500 uppercase">Edit form below</p>
                 <span class="border-b w-1/5 lg:w-1/4"></span>
             </div>
             <div class="mt-4">
@@ -34,7 +34,7 @@
                     </div>
                     <div class="flex-1">
                         <label class="block text-gray-700 text-sm font-bold mb-2">PDF</label>
-                         <input v-on:change="pdfChange" class=" bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none" type="file">  
+                         <input  v-on:change="pdfChange" class=" bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none" type="file">  
                     </div>
                 </div>
             </div>
@@ -46,7 +46,7 @@
                  
             </div>
             <div class="mt-8">
-                <input value="Add" class="bg-gray-700 text-white font-bold py-2 px-4 w-full rounded hover:bg-gray-600" type="submit" />
+                <input value="Edit" class="bg-gray-700 text-white font-bold py-2 px-4 w-full rounded hover:bg-gray-600" type="submit" />
               
             </div>
             <div class="mt-4 flex items-center justify-between">
@@ -66,11 +66,20 @@
 
 
 <script>
-import Book from "../components/Book.vue"
+import Book from "~/components/Book.vue"
 
 
 export default {
   
+    async asyncData({ $axios, params }) {
+        try {
+        let book = await $axios.$get(`books/get-book/${params.id}`);
+        return { book };
+        } 
+        catch (e) {
+        return { book: [] };
+      }
+    },
 
     data() {
         return {
@@ -84,6 +93,7 @@ export default {
                 user_id : this.$auth.user.id
 
             },
+            url: "http://127.0.0.1:8000",
             preview: ""
             
         };
@@ -116,21 +126,29 @@ export default {
         reader.readAsDataURL(file);
         },
 
-        async newBook(){
+        async editBook(){
+            let editedBook = this.book
+
+            if(!this.editBook.pdf ){
+                this.$toast.error("PDF is required  !")
+            }
+
             const config = {
                 headers: { "content-type": "multipart/form-data" }
             };
+
             let formData = new FormData();
-            for(let data in this.book){
-                formData.append(data , this.book[data])
+            for (let data in editedBook) {
+                formData.append(data, editedBook[data]);
             }
-            try{
-                let respone = await this.$axios.$post("books/create-book/" ,formData , config);
-                this.$router.push("/Allbooks")
-            }catch(e){
-                this.$toast.error(e)
+
+            try {
+                let response = await this.$axios.$put(`books/update-book/${editedBook.id}`, formData, config);
+                this.$router.push("/Allbooks");
+            } catch (e) {
+                console.log(e);
             }
-        }
+    }
     },
     components: { Book },
     layout:'dashboard',

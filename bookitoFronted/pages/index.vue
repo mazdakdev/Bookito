@@ -86,13 +86,6 @@
       <!-- END -->
  
     </header>
-
-    <!-- START of second page -->
-    
-
-    <!-- END of second page -->
-
-
   </div>
 
 </template>

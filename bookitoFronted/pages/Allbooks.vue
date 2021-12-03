@@ -78,6 +78,6 @@ export default {
     },
     components: { Book },
     layout:'dashboard',
-    middleware: 'guest'
+    middleware: 'auth'
 }
 </script>

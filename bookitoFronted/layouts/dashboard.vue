@@ -45,7 +45,7 @@
               Home
             </nuxt-link>
 
-            <nuxt-link to="Allbooks" class="  inline-block mt-0    lg:text-base text-gray-500 hover:text-indigo-600  ml-14 ">
+            <nuxt-link to="/Allbooks" class="  inline-block mt-0    lg:text-base text-gray-500 hover:text-indigo-600  ml-14 ">
               Books
             </nuxt-link>
 

@@ -1,6 +1,5 @@
 <template>
     <div>
-
         <div class="lg:flex mt-10 xs:hidden  ">
             <div class="flex-1">
                 <Single :img="url + book.image "  class="absolute left-64 rtt z-10 top-56  " ></Single>
@@ -45,7 +44,9 @@
                             
                         </div>
                     </div>
-                    <button class="text-white bg-yellow-500 p-4 mt-2 rounded-md w-full uppercase">Edit </button>
+                    <nuxt-link :to="`/editBook/${book.id}`">
+                        <button class="text-white bg-yellow-500 p-4 mt-2 rounded-md w-full uppercase">Edit </button>
+                    </nuxt-link>
                 </div>
                 <div class="absolute top-0 right-0 mt-4 mr-4 bg-purple-600 text-white rounded-full pt-1 pb-1 pl-4 pr-5 text-xs uppercase">
                 <span>{{ book.category }}</span>
@@ -81,7 +82,10 @@
                             
                         </div>
                     </div>
-                    <button class="text-white bg-yellow-500 p-4 mt-2 rounded-md w-full uppercase">Edit </button>
+                    <nuxt-link :to="`/editBook/${book.id}`">
+                        <button class="text-white bg-yellow-500 p-4 mt-2 rounded-md w-full uppercase">Edit </button>
+                    </nuxt-link>
+                    
                     
                 </div>
                 <div class="absolute top-0 right-0 mt-4 mr-4 bg-purple-600 text-white rounded-full pt-1 pb-1 pl-4 pr-5 text-xs uppercase">
@@ -140,7 +144,7 @@ export default {
     },
 
     methods: {
-        async deleteBook(book_id) {
+     async deleteBook(book_id) {
       try {
         await this.$axios.$delete(`/books/delete-book/${book_id}`); // delete recipe
         this.$router.push("/Allbooks")
@@ -149,8 +153,10 @@ export default {
       }
     },
     },
-    layout: "dashboard",
+    middleware: "auth",
+    layout:'dashboard',
     components: { Single  }
+
 }
 
 </script>
