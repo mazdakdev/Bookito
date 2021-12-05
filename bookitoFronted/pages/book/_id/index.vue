@@ -44,7 +44,7 @@
                             
                         </div>
                     </div>
-                    <nuxt-link :to="`/editBook/${book.id}`">
+                    <nuxt-link :to="`/books/edit/${book.id}`">
                         <button class="text-white bg-yellow-500 p-4 mt-2 rounded-md w-full uppercase">Edit </button>
                     </nuxt-link>
                 </div>
@@ -105,7 +105,7 @@
               Home
             </nuxt-link>
 
-            <nuxt-link to="/Allbooks" class="  inline-block mt-0 xs:text-2xl   text-white ml-14 ">
+            <nuxt-link to="/books" class="  inline-block mt-0 xs:text-2xl   text-white ml-14 ">
               Books
             </nuxt-link>
 
@@ -147,13 +147,13 @@ export default {
      async deleteBook(book_id) {
       try {
         await this.$axios.$delete(`/books/delete-book/${book_id}`); // delete recipe
-        this.$router.push("/Allbooks")
+        this.$router.push("/books")
       } catch (e) {
         console.log(e);
       }
     },
     },
-    middleware: "auth",
+    middleware: "userAuth",
     layout:'dashboard',
     components: { Single  }
 

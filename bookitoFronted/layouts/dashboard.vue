@@ -29,10 +29,10 @@
         </div>
 
         <div class="flex items-center w-auto">
-          <nuxt-link to="/login"><img src="../assets/user.png" class="inline-block mr-12"></nuxt-link>
+          <nuxt-link to="/user/login"><img src="~/assets/user.png" class="inline-block mr-12"></nuxt-link>
           <!-- icon by flaticon.com -->
           <div v-if="$auth.loggedIn">
-            <nuxt-link to="/profile" class="mr-5">{{ $auth.user.username }}</nuxt-link>
+            <p  class="mr-5">{{ $auth.user.username }}</p>
           </div>
         </div>
       </div>
@@ -45,7 +45,7 @@
               Home
             </nuxt-link>
 
-            <nuxt-link to="/Allbooks" class="  inline-block mt-0    lg:text-base text-gray-500 hover:text-indigo-600  ml-14 ">
+            <nuxt-link to="/books" class="  inline-block mt-0    lg:text-base text-gray-500 hover:text-indigo-600  ml-14 ">
               Books
             </nuxt-link>
 

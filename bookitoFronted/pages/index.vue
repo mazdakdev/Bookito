@@ -21,7 +21,7 @@
               Home
             </nuxt-link>
 
-            <nuxt-link to="/Allbooks" class="  inline-block mt-0 sm:text-3xl   lg:text-xl text-white ml-14 ">
+            <nuxt-link to="/books" class="  inline-block mt-0 sm:text-3xl   lg:text-xl text-white ml-14 ">
               Books
             </nuxt-link>
 
@@ -52,7 +52,7 @@
               </div>
 
               <div class="flex-1 ">
-                <nuxt-link to="/Allbooks" class="bg-white text-black   sm:text-2xl lg:text-xl lg:py-4 lg:px-7 py-4 px-8 xs:py-4 xs:px-7  rounded-full ">
+                <nuxt-link to="/books" class="bg-white text-black   sm:text-2xl lg:text-xl lg:py-4 lg:px-7 py-4 px-8 xs:py-4 xs:px-7  rounded-full ">
                  All the books
                 </nuxt-link>
               </div>
@@ -76,7 +76,7 @@
               Home
             </nuxt-link>
 
-            <nuxt-link to="/Allbooks" class="  inline-block mt-0 xs:text-2xl   text-white ml-14 ">
+            <nuxt-link to="/books" class="  inline-block mt-0 xs:text-2xl   text-white ml-14 ">
               Books
             </nuxt-link>
 
@@ -89,16 +89,3 @@
   </div>
 
 </template>
-<script>
-
-export default {
-  data() {
-    return {
-      
-    };
-  },
- 
-};
-</script>
-
-<style lang="scss" scoped></style>

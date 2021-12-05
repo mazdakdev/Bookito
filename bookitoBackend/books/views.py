@@ -9,8 +9,9 @@ from django.contrib.auth.models import User
 
 
     
-@permission_classes([permissions.IsAuthenticated])
+
 @api_view(['POST'])
+@permission_classes([permissions.IsAuthenticated])
 def create_book(request):
     if request.method == 'POST':
         serializer = BookSerializer(data=request.data )
@@ -20,18 +21,20 @@ def create_book(request):
         return Response(serializer.errors , status=status.HTTP_400_BAD_REQUEST)
 
 
-@permission_classes([permissions.IsAuthenticated])
 @api_view(["GET"])
-def read_books(request):
+@permission_classes([permissions.IsAuthenticated])
+def read_books(request ):
     if request.method == "GET":
-        books = Book.objects.filter(user_id = request.user.id)
+        
+        books = Book.objects.filter(user_id = request.user.id )
         serializer = BookSerializer(books , many=True)
         return Response(serializer.data)
     return Response("Something Went Wrong" , status=status.HTTP_400_BAD_REQUEST)
 
 
-@permission_classes([permissions.IsAuthenticated])
+
 @api_view(['PUT'])
+@permission_classes([permissions.IsAuthenticated])
 def update_book(request , id):
     if request.method == 'PUT':
         book = Book.objects.get(id=id)
@@ -42,8 +45,9 @@ def update_book(request , id):
         return Response(serializer.errors , status=status.HTTP_400_BAD_REQUEST)
         
 
-@permission_classes([permissions.IsAuthenticated])
+
 @api_view(['DELETE'])
+@permission_classes([permissions.IsAuthenticated])
 def delete_book(request , id):
     if request.method == 'DELETE':
         book = Book.objects.get(id=id , user_id=request.user.id)
@@ -92,8 +96,9 @@ def get_latest_updated_books_descending(request):
         return Response(serializer.data)
     return Response("Some thing went wrong" , status=status.HTTP_400_BAD_REQUEST)
 
-@permission_classes([permissions.IsAuthenticated])
+
 @api_view(['GET'])
+@permission_classes([permissions.IsAuthenticated])
 def Search_books(request ):
     if request.method == 'GET':
         get_data = request.query_params.get('name')
@@ -102,8 +107,9 @@ def Search_books(request ):
         return Response(serializer.data)
     return Response("Some thing went wrong" , status=status.HTTP_400_BAD_REQUEST)
     
-@permission_classes([permissions.IsAuthenticated])
+
 @api_view(["GET"])
+@permission_classes([permissions.IsAuthenticated])
 def get_book_by_id(request , id):
     if request.method == "GET":
         book = Book.objects.get(user_id = request.user.id , id=id)

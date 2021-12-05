@@ -203,3 +203,7 @@ nav a:hover {
 .rtt {
     transform: rotate(-5deg);
 }
+
+.pagination li a:hover {
+    @apply border-t border-b border-l border-blue-100 px-3 py-2 bg-blue-100 no-underline text-blue-500 text-sm;
+}

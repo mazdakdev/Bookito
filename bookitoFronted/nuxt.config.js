@@ -21,23 +21,17 @@ export default {
 
     // Global CSS: https://go.nuxtjs.dev/config-css
     css: [
-
         'assets/css/tailwind.css',
-        'assets/font-awesome-4.7.0/css/font-awesome.min.css',
-
     ],
 
     // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
     plugins: [
         '~/plugins/vueTyper.client.js',
-
+        '~/plugins/pagination.js'
     ],
 
     script: [{
-        src: 'assets/jquery-3.6.0.min.js',
-        src: 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js',
-        src: 'assets/js/bootstrap.min.js',
-        src: 'assets/js/typewrite.js',
+
 
     }],
 
@@ -83,8 +77,8 @@ export default {
                 tokenName: "Authorization"
             },
             redirect: {
-                login: '/login',
-                home: '/Allbooks'
+                login: '/auth/login',
+                home: '/books'
 
             }
         }
