@@ -3,7 +3,7 @@
   <div class="flex bg-white rounded-lg shadow-lg overflow-hidden mx-auto max-w-sm lg:max-w-4xl align-middle  " >
         <div   class=" lg:block lg:w-1/3 bg-cover hidden "  >
             <Single v-if="preview" :img="preview"  class="absolute left-72 rtt z-10 top-72   mt-5 " ></Single>
-            <Single v-else img="https://static.vecteezy.com/system/resources/previews/002/909/206/original/abstract-background-for-landing-pages-banner-placeholder-cover-book-and-print-geometric-pettern-on-screen-gradient-colors-design-vector.jpg"  class="absolute left-72 rtt z-10 top-72   mt-5 " ></Single>
+            <Single v-else class="absolute left-72 rtt z-10 top-72   mt-5 " :img="url + book.image" ></Single>
         </div>
         <div class="w-full p-8 lg:w-3/4  ">
           <form method="post" @submit.prevent="editBook">

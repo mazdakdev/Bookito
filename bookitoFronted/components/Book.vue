@@ -8,6 +8,9 @@
             <p class="text-gray-800 text-xl "> {{ title }} </p>
              <p class="text-sm text-gray-500 "> {{ author }} </p>
         </div> 
+
+
+
     </div>
 </template>
 
@@ -21,11 +24,8 @@
        width:'w-48',
        height: 'h-64',
        
-     
       }
-      
-    },
-
+    }
   }
 </script>
 

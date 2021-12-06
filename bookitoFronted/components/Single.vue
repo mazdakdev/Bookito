@@ -7,15 +7,11 @@
 </template>
 
 <script>
-
   export default {
     name: 'BookSingle',
     props: ['img'],
   }
-
 </script>
 
 <style>
-
-
 </style>
