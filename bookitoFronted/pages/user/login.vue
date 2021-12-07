@@ -29,7 +29,7 @@
             </div>
             <div class="mt-4 flex items-center justify-between">
                 <span class="border-b w-1/5 md:w-1/4"></span>
-                <nuxt-link to="/register" class="text-xs text-gray-500 uppercase">or sign up</nuxt-link>
+                <nuxt-link to="/user/register" class="text-xs text-gray-500 uppercase">or sign up</nuxt-link>
                 <span class="border-b w-1/5 md:w-1/4"></span>
             </div>
 

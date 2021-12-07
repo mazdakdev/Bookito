@@ -27,7 +27,8 @@ export default {
     // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
     plugins: [
         '~/plugins/vueTyper.client.js',
-        '~/plugins/pagination.js'
+        '~/plugins/pagination.js',
+        '~/plugins/pdf.client.js',
     ],
 
     script: [{

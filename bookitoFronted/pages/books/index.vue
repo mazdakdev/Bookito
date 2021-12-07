@@ -12,7 +12,9 @@
 
   
         <div class="flex-1 " v-for="book in pageOfItems" :key="book.id">
-          <Book :img=" url + book.image" :author="book.author" :title="book.title" :book_id="book.id"></Book>
+          <nuxt-link :to="`/book/${book.id}`">
+            <Book :img=" url + book.image" :author="book.author" :title="book.title" :book_id="book.id"></Book>
+          </nuxt-link>
           <div class="mt-3 ">
             <button class="text-sm text-red-500 flex-1" @click="deleteBook(book.id)"> DELETE </button>
             <nuxt-link :to="`/books/edit/${book.id}`" class="text-sm text-yellow-500 ml-5 flex-1 mr-44"> EDIT </nuxt-link>
@@ -23,7 +25,9 @@
 
     <div class=" flex items-center justify-center mt-60 lg:hidden " >
       <div v-for="book in pageOfItemsR" :key="book.id">
+        <nuxt-link :to="`/book/${book.id}`">
         <Book :img=" url + book.image" :author="book.author" :title="book.title"></Book>
+        </nuxt-link>
       </div>
     </div>
 
