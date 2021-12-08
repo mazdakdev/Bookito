@@ -1,5 +1,5 @@
 <template>
-<div class="py-6  mt-16 ">
+<div class="py-6 mt-32 ">
   <div class="flex bg-white rounded-lg shadow-lg overflow-hidden mx-auto max-w-sm lg:max-w-4xl align-middle  " v-if="!$auth.loggedIn">
         <div   class=" lg:block lg:w-1/3 bg-cover hidden" >
           <img src="~/assets/5488161.jpg">

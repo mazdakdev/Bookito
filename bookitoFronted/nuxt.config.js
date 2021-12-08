@@ -73,13 +73,13 @@ export default {
                         method: 'GET',
                         propertyName: false
                     },
-                    logout: { url: 'auth/logout', method: 'post' },
+                    logout: { url: 'auth/logout/', method: 'post' },
                 },
                 tokenType: "Token",
                 tokenName: "Authorization"
             },
             redirect: {
-                login: '/auth/login',
+                login: '/user/login',
                 home: '/books'
 
             }

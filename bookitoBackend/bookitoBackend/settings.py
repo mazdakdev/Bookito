@@ -21,8 +21,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv("SECRET_KEY")
-DEBUG = os.getenv("DEBUG")
+#SECRET_KEY = os.getenv("SECRET_KEY")
+SECRET_KEY = "django-insecure-4q5)x*3!8=+crfzu@9_3$zyw!ggr__*p3(8dq7r@=$j2)++9#j"
+DEBUG = True
+#DEBUG = os.getenv("DEBUG")
 
 ALLOWED_HOSTS = ["*"]
 
@@ -81,12 +83,8 @@ WSGI_APPLICATION = 'bookitoBackend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'postgres',
-        'USER': 'user',
-        'PASSWORD': 'password',
-        'HOST': 'bookito_backend_postgresql',
-        'PORT': '5432'
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'postgres.sqlite3',
     }
 }
 
