@@ -91,4 +91,4 @@ RUN with docker-compose
     
 # Contributions :
 
-  ## No one is a complete human and so am i so please eel free to give your opinion and show issues for my improvement 🌈⚡️ this will make me happy
+  ## No one is a complete human and so am i so please feel free to give your opinion and show issues for my improvement 🌈⚡️ this will make me happy
