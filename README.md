@@ -1,5 +1,4 @@
-# ⚠️ This app is under development & it's not ready to use ! ⚠️
-- - - -
+
 # Bookito
 ## A book library for all books you need 
 - - - - 
@@ -11,7 +10,7 @@
   Bookito is a web application based on Django and Nuxt.js 🔥 this app is a **portabl** book library  📕 that you can manage and read all the books you have with 
   just simple information of that book (pdf , image , author , etc ..)
 ## Some notes:
-  I had many school exams and I didn't work as much as needed in ui/ux part of project
+  ### I had many school exams and I didn't work as much as needed in ui/ux part  and fronted of project of course I can do 100% better then this project
   
 - - - -
 # Screenshots 🔥
@@ -89,10 +88,15 @@ Markup :  `(Create ./env in root directory of project)`
 - - - -
 # Setup
 
-RUN with docker-compose
 
-    $ docker-compose up --build
-    OR
+Install Docker
+   
+    $ sudo apt-get install docker 
+    $ sudo brew install docker
+    $ etc
+
+RUN with docker-compose
+   
     $ docker composer up
 
 
