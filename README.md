@@ -17,8 +17,8 @@
 ![screenshot](https://s4.uupload.ir/files/screen_shot_2021-12-08_at_10.24.15_am_6t2b.png)
 ![screenshot](https://s4.uupload.ir/files/screen_shot_2021-12-08_at_10.24.29_am_5136.png)
 ![screenshot](https://s4.uupload.ir/files/screen_shot_2021-12-08_at_10.27.35_am_6aig.png)
-![screenshot](https://s4.uupload.ir/files/screen_shot_2021-12-08_at_10.29.39_am_bcku.png)
-![screenshot](https://s4.uupload.ir/files/screen_shot_2021-12-08_at_10.37.46_am_65s7.png)
+![screenshot](https://s4.uupload.ir/files/screen_shot_2021-12-08_at_12.53.34_pm_zg8.png)
+![screenshot](https://s4.uupload.ir/files/screen_shot_2021-12-08_at_12.54.10_pm_o61l.png)
 ![screenshot](https://s4.uupload.ir/files/screen_shot_2021-12-08_at_10.38.00_am_4ml.png)
 ![screenshot](https://s4.uupload.ir/files/screen_shot_2021-12-08_at_10.38.10_am_xa2g.png)
 ![screenshot](https://s4.uupload.ir/files/screen_shot_2021-12-08_at_10.38.37_am_95w6.png)
@@ -47,6 +47,7 @@
 ![appple](https://img.shields.io/badge/Apple-laptop-999999?style=for-the-badge&logo=apple&logoColor=white)
 ![vscode](https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)
 ![tailwind.css](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![djangorest](https://img.shields.io/badge/DJANGO-REST-ff1709?style=for-the-badge&logo=django&logoColor=white&color=ff1709&labelColor=gray)
 
 - - - -
 
@@ -103,4 +104,4 @@ RUN with docker-compose
     
 # Contributions :
 
-  ## No one is a complete human and so am i so please feel free to give your opinion and show issues for my improvement 🌈⚡️ this will make me happy
+  ## Nothing is complete in this world so please feel free to give your opinion and show issues for my improvement 🌈⚡️ this will make me really happy :)
