@@ -55,11 +55,11 @@
 
 - - - -
 
-Setup Variables in code :
+## Setup Variables in code :
 
 ### 1/3 Config axios url 
 
-Markup :  `( bookitoFronted/nuxt.config.js ~ line 62 ~ 65)`
+Location :  `( bookitoFronted/nuxt.config.js ~ line 62 ~ 65)`
 
 ```javascript
     axios: {
@@ -69,7 +69,7 @@ Markup :  `( bookitoFronted/nuxt.config.js ~ line 62 ~ 65)`
 
 ### 2/3 Config images url  
 
-Markup :  `(bookitoFronted/plugins/django.js ~ line 4)`
+Location :  `(bookitoFronted/plugins/django.js ~ line 4)`
 
 ```javascript
     inject('Django', Vue.observable({ url: 'http://YOUR-BACKEND-URL-HERE:8000' }))
@@ -77,7 +77,7 @@ Markup :  `(bookitoFronted/plugins/django.js ~ line 4)`
 
 ### 3/3 Config env variables
 
-Markup :  `(Create ./env in root directory of project)`
+Location :  `(Create ./env in root directory of project)`
 
 ```env
     POSTGRES_USER=your-database-user
@@ -90,18 +90,20 @@ Markup :  `(Create ./env in root directory of project)`
 # Setup
 
 
-Install Docker
-   
-    $ sudo apt-get install docker 
-    $ sudo brew install docker
-    $ etc
+## Install Docker From <a href="https://docs.docker.com/engine/install/">this</a> link
 
-RUN with docker-compose
+
+
+Run with docker-compose
    
-    $ docker composer up
+    $ docker compose up
+    
+to show Logs 
+   
+    $ docker compose up --build
 
 
     
 # Contributions :
 
-  ## Nothing is complete in this world so please feel free to give your opinion and show issues for my improvement 🌈⚡️ this will make me really happy :)
+  ## Nothing is complete in this world so please feel free to give your opinion and show issues for my improvement 🌈⚡️ this will make me  happy :)
