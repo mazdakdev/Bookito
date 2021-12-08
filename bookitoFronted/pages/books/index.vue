@@ -15,7 +15,7 @@
 
         <div class=" flex-grow flex items-center w-auto ">
             <div class="pt-2 relative mx-auto text-gray-600">
-              <input class="border-2 border-gray-300 bg-gray-50 h-10 px-44 pr-16 rounded-lg text-sm focus:outline-none" type="search" name="search" placeholder="Search">
+              <input class="border-2 border-gray-300 bg-gray-50 h-10 px-44 pr-16 rounded-lg text-sm focus:outline-none" type="search" name="search" placeholder="Search" v-model="query" v-on:keyup.enter="fetchData">
               <button type="submit" class="absolute right-0 top-0 mt-5 mr-4">
                 <svg class="text-gray-600 h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg"
                   xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px"
@@ -64,15 +64,15 @@
 <div class="lg:flex xs:hidden">
   <div class="flex-1 ">
         <div class="lg:flex  mt-32    "> 
-        <div class="flex-1 ml-16  " v-for="book in pageOfItems" :key="book.id">
+        <div class="flex-1 ml-16  " v-for="book in books" :key="book.id">
           <nuxt-link :to="`/book/${book.id}`">
             <Book :img="url +book.image" :author="book.author" :title="book.title" :book_id="book.id"></Book>
             
           </nuxt-link>
           
-          <div class="mt-3 flex ">
+          <div class="mt-3  ">
             <button class="text-sm text-red-500 flex-1" @click="deleteBook(book.id)"> DELETE </button>
-            <nuxt-link :to="`/books/edit/${book.id}`" class="text-sm text-yellow-500 ml-3  flex-1 mr-44"> EDIT </nuxt-link>
+            <nuxt-link :to="`/books/edit/${book.id}`" class="text-sm text-yellow-500 ml-3   flex-1 mr-44"> EDIT </nuxt-link>
           </div>
         </div>
     </div>
@@ -88,7 +88,7 @@
 <!-- START | Book in responsive mood -->
 
 
-<div class="xs:flex lg:hidden ">
+<div class="xs:flex lg:hidden md:hidden ">
   <div class="flex-1">
         <div class=" flex items-center justify-center mt-52 ml-5  " >
       <div v-for="book in pageOfItemsR" :key="book.id">
@@ -113,13 +113,43 @@
 
 <!-- END | Book in responsive mood -->
 
+<!-- START | Book in responsive mood md -->
+
+<div class="md:flex lg:hidden xs:hidden ">
+  <div class="flex-1">
+    <div class=" flex items-center justify-center mt-52 ml-20  " >
+      <div v-for="book in pageOfItemsRR" :key="book.id" class="ml-20">
+        <nuxt-link :to="`/book/${book.id}`">
+        <Book :img=" url + book.image" :author="book.author" :title="book.title"></Book>
+        </nuxt-link>
+        <div class="mt-3 flex ">
+            <button class="text-sm text-red-500 flex-1" @click="deleteBook(book.id)"> DELETE </button>
+            <nuxt-link :to="`/books/edit/${book.id}`" class="text-sm text-yellow-500 ml-3  flex-1 mr-44"> EDIT </nuxt-link>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex-1 mt-52 ">
+    <nuxt-link to="/books/new">
+    <img src="https://img.icons8.com/ios/50/000000/plus.png" class="float-right  mr-10 mt-20 lg:mt-56" />
+    </nuxt-link>
+  </div>
+
+</div>
+
+
+<!-- END | Book in responsive mood md -->
 
    <div class="flex  justify-center ">
       <div class="lg:inline-flex xs:hidden bottom-5 absolute" >
         <jw-pagination   :items="books"  @changePage="onChangePage" :pageSize="4" :labels="customLabels" ></jw-pagination>
       </div> 
-      <div class="inline-flex bottom-5  absolute  lg:hidden " >
+      <div class="inline-flex bottom-5  absolute  lg:hidden md:hidden " >
         <jw-pagination   :items="books" @changePage="onChangePageR" :pageSize="1" :labels="customLabels"  ></jw-pagination>
+      </div>
+      <div class="md:inline-flex bottom-5  absolute  lg:hidden xs:hidden " >
+        <jw-pagination   :items="books" @changePage="onChangePageRR" :pageSize="2" :labels="customLabels"  ></jw-pagination>
       </div>
     </div>
 
@@ -158,31 +188,50 @@ export default {
         books : [],
         pageOfItems : [],
         pageOfItemsR : [],
+        pageOfItemsRR : [],
         paginate:['all_books'],
         customLabels,
         img: null,
-        url:this.$Django.url
+        url:this.$Django.url,
+        query:""
       };
     },
     methods : {
 
+     async fetchData(){
+      try{
+        if(this.query !== ''|| this.query !== null) {
+            let searchedBooks =  await this.$axios.$get(`books/books/?name=${this.query}`);
+            this.books = searchedBooks;
+        }
+       }
+       catch (e) {
+          this.$toast.error(e);
+        }
+      
+     },
       
       onChangePage(pageOfItems) {
             // update page of items
-            this.pageOfItems = pageOfItems;
+          this.pageOfItems = pageOfItems;
       },
+      
 
       onChangePageR(pageOfItemsR){
         this.pageOfItemsR = pageOfItemsR;
       },
 
+      onChangePageRR(pageOfItemsRR){
+        this.pageOfItemsRR = pageOfItemsRR;
+      },
+
       async deleteBook(book_id) {
         try {
-          await this.$axios.$delete(`/books/delete-book/${book_id}`);
-          let newBooks = await this.$axios.$get("/books/read-books"); // get new list of books
+          await this.$axios.$delete(`books/delete-book/${book_id}`);
+          let newBooks = await this.$axios.$get("books/read-books"); // get new list of books
           this.books = newBooks; // update list of books
         } catch (e) {
-          console.log(e);
+          this.$toast.error(e);
         }
       }
 

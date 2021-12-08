@@ -75,26 +75,6 @@ def get_book_by_author(request , id):
         return Response(serializer.data)
     return Response("Some thing went wrong" , status=status.HTTP_400_BAD_REQUEST)
 
-# Function's to get last 4 books Decending, ascending
-
-@api_view(['GET'])
-@permission_classes([permissions.IsAuthenticated])
-def get_lastest_updated_books(request):
-    if request.method == "GET":
-        last_four = Book.objects.filter(user_id=request.user.id).order_by('-id')[:4]
-        last_fpur_in_ascending_order = reversed(last_six)
-        serializer = BookSerializer(last_four , Many=True)
-        return Response(serializer.data)
-    return Response("Some thing went wrong" , status=status.HTTP_400_BAD_REQUEST)
-
-@api_view(['GET'])
-@permission_classes([permissions.IsAuthenticated])
-def get_latest_updated_books_descending(request):
-    if request.method == "GET":
-        last_four = Book.objects.filter(user_id=request.user.id).order_by('-id')[:4]
-        serializer = BookSerializer(last_four , Many=True)
-        return Response(serializer.data)
-    return Response("Some thing went wrong" , status=status.HTTP_400_BAD_REQUEST)
 
 
 @api_view(['GET'])
