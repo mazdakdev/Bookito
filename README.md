@@ -1,3 +1,5 @@
+# ⚠️ This app is under development & it's not ready to use ! ⚠️
+- - - -
 # Bookito
 ## A book library for all books you need 
 - - - - 
