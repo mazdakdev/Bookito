@@ -29,6 +29,7 @@ export default {
         '~/plugins/vueTyper.client.js',
         '~/plugins/pagination.js',
         '~/plugins/pdf.client.js',
+        '~/plugins/django.js',
     ],
 
     script: [{

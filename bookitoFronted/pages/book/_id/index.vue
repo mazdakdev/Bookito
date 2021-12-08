@@ -19,7 +19,7 @@ export default {
     data(){
         return {
             book:[],
-            url: "http://127.0.0.1:8000",
+            url: this.$Django.url
       
         }
     }

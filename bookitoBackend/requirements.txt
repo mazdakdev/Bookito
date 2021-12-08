@@ -1,7 +1,8 @@
-Django
-djangorestframework
-knox
-djnago-rest-knox
-selenium
-Pillow
-django-cors-headers
+Django==3.2.3
+djangorestframework==3.12.4
+knox==0.1.11
+django-rest-knox==4.1.0
+Pillow==8.4.0
+django-cors-headers==3.10.1
+psycopg2==2.9.2
+gunicorn==20.1.0

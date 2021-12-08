@@ -93,7 +93,7 @@ export default {
                 user_id : this.$auth.user.id
 
             },
-            url: "http://127.0.0.1:8000",
+            url:this.$Django.url,
             preview: ""
             
         };

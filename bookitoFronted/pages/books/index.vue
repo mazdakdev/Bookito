@@ -6,6 +6,7 @@
     <nuxt-link to="/books/new">
     <img src="https://img.icons8.com/ios/50/000000/plus.png" class="float-right  mr-10 mt-20" />
     </nuxt-link>
+ 
 
     <div class="lg:flex  mt-44 ml-28   xs:hidden ">  
 
@@ -13,7 +14,8 @@
   
         <div class="flex-1 " v-for="book in pageOfItems" :key="book.id">
           <nuxt-link :to="`/book/${book.id}`">
-            <Book :img=" url + book.image" :author="book.author" :title="book.title" :book_id="book.id"></Book>
+            <Book :img="url +book.image" :author="book.author" :title="book.title" :book_id="book.id"></Book>
+      
           </nuxt-link>
           <div class="mt-3 ">
             <button class="text-sm text-red-500 flex-1" @click="deleteBook(book.id)"> DELETE </button>
@@ -76,11 +78,14 @@ export default {
         pageOfItems : [],
         pageOfItemsR : [],
         paginate:['all_books'],
-        url : "http://127.0.0.1:8000",
         customLabels,
+        img: null,
+        url:this.$Django.url
       };
     },
     methods : {
+
+      
       onChangePage(pageOfItems) {
             // update page of items
             this.pageOfItems = pageOfItems;

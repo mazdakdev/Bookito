@@ -1,0 +1,63 @@
+version: '3'
+
+services:
+  backend:
+    build: ./bookitoBackend
+    container_name: backend
+    env_file: 
+      - .env
+    volumes:
+      - .:/bookitoBackend
+      - media:/backend/media
+  
+    expose:
+      - "8000"
+    networks:
+      - bookito_network
+    depends_on:
+      - bookito_backend_postgresql
+
+
+  bookito_backend_postgresql:
+    image: postgres:latest
+    container_name: bookito_backend_postgresql
+    volumes: 
+      - postgresql:/var/lib/postgresql/data
+    restart: always
+    env_file: .env
+    ports:
+      - "5432:5432"
+    networks:
+      - bookito_network
+
+  nginx:
+    build: ./nginx
+    container_name: ng01
+    ports:
+      - "8000:8000"
+    
+    volumes:
+      - media:/backend/media
+    depends_on:
+      - backend
+    networks:
+      - bookito_network
+
+  web:
+    build: ./bookitoFronted
+    container_name: web
+    restart: always
+    ports:
+      - "80:3000"
+    networks:
+      - bookito_network
+
+volumes:
+  postgresql: 
+    external : true
+  media:
+
+
+networks:
+  bookito_network:
+    external : true
