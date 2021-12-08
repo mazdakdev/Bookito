@@ -9,7 +9,7 @@
   Bookito is a web application based on Django and Nuxt.js 🔥 this app is a **portabl** book library  📕 that you can manage and read all the books you have with 
   just simple information of that book (pdf , image , author , etc ..)
 ## Some notes:
-  I had many exams and I didn't work as much as needed in ui/ux part of project
+  I had many school exams and I didn't work as much as needed in ui/ux part of project
   
 - - - -
 # Screenshots 🔥
