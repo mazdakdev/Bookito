@@ -76,7 +76,7 @@ Location :  `(bookitoFronted/plugins/django.js ~ line 4)`
 
 ### 3/3 Config env variables
 
-Location :  `(Create ./env in root directory of project)`
+Location :  `(Create .env in root directory of project)`
 
 ```env
     POSTGRES_USER=your-database-user
