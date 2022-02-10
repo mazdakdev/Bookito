@@ -22,8 +22,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 #SECRET_KEY = os.getenv("SECRET_KEY")
-SECRET_KEY = "django-insecure-4q5)x*3!8=+crfzu@9_3$zyw!ggr__*p3(8dq7r@=$j2)++9#j"
-DEBUG = True
+SECRET_KEY = os.getenv("SECRET_KEY")
+DEBUG = os.getenv("DEBUG")
 #DEBUG = os.getenv("DEBUG")
 
 ALLOWED_HOSTS = ["*"]
@@ -58,7 +58,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'bookitoBackend.urls'
-CORS_ALLOW_ALL_ORIGINS = True
+CORS_ORIGIN_ALLOW_ALL = True
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -83,9 +83,14 @@ WSGI_APPLICATION = 'bookitoBackend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'postgres.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.environ.get('POSTGRES_DB'),
+        'USER': os.environ.get('POSTGRES_USER'),
+        'PASSWORD': os.environ.get('POSTGRES_PASSWORD'),
+        'HOST': "bookito_backend_postgresql",
+        'PORT': 5432,
     }
+
 }
 
 
@@ -140,3 +145,4 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR , 'media')
 STATIC_ROOT = os.path.join(BASE_DIR , 'static')
 STATIC_URL = '/static/'
+

@@ -41,7 +41,7 @@
             </div>
             <div class="mt-4 flex items-center justify-between">
                 <span class="border-b w-1/5 md:w-1/4"></span>
-                <nuxt-link to="/auth/login" class="text-xs text-gray-500 uppercase">or Login</nuxt-link>
+                <nuxt-link to="/user/login" class="text-xs text-gray-500 uppercase">or Login</nuxt-link>
                 <span class="border-b w-1/5 md:w-1/4"></span>
             </div>
 

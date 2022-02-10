@@ -47,6 +47,7 @@ services:
     build: ./bookitoFronted
     container_name: web
     restart: always
+    env_file: .env
     ports:
       - "80:3000"
     networks:

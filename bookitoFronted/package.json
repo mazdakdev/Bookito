@@ -12,6 +12,7 @@
         "@fortawesome/fontawesome-svg-core": "^1.2.36",
         "@nuxtjs/auth": "^4.9.1",
         "@nuxtjs/axios": "^5.13.1",
+        "@nuxtjs/dotenv": "^1.4.1",
         "@nuxtjs/pwa": "^3.3.5",
         "@nuxtjs/tailwindcss": "^4.2.1",
         "@nuxtjs/toast": "^3.3.1",
