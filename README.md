@@ -1,22 +1,21 @@
 
+
 # Bookito
-## A book library for all books you need 
+
+Bookito is a web application based on Django and Nuxt.js.
+which is a **portable** book library, that you can manage and read all the books you have
+with variety of supported formats like EPUB and PDF.
+
+it provides you real feel of book reading with a neat page flip animation
+and the way your books are organized in your library
+
+it can be easily deployed using docker compose and the commands guide below.
+
 - - - - 
-
-# Author :
-  ## Mazdak Pakaghideh 🔭👨‍💻
-
-# Descreption 
-  Bookito is a web application based on Django and Nuxt.js 🔥 this app is a **portable** book library  📕 that you can manage and read all the books you have with 
-  just simple information of that book (pdf , image , author , etc ..)
-
-  
-- - - -
-# Screenshots 🔥
+# Screenshots
 ![screenshot](https://s4.uupload.ir/files/screen_shot_2021-12-08_at_10.24.15_am_6t2b.png)
 ![screenshot](https://s4.uupload.ir/files/screen_shot_2021-12-08_at_10.24.29_am_5136.png)
 ![screenshot](https://s4.uupload.ir/files/screen_shot_2021-12-08_at_12.53.34_pm_zg8.png)
-
 - - - -
 
 # Tools Used to develope this web-app🎯
@@ -84,20 +83,22 @@ Location :  `(Create .env in root directory of project)`
 # Setup
 
 
-## Install Docker From <a href="https://docs.docker.com/engine/install/">this</a> link
-
+## Install Docker From [this](https://docs.docker.com/engine/install/) link
 
 
 Run with docker-compose
-   
-    $ docker compose up
-    
-to show Logs 
-   
-    $ docker compose up --build
 
+```console
+user@host:~$ docker compose up
+```
+
+To show Logs
+
+```console
+user@host:~$ docker compose up --build
+```
 
     
 # Contributions :
 
-  ##  Feel free to give your opinion and show my issues for my improvement 
+   Feel free to give your opinion and show my issues for my improvement 
