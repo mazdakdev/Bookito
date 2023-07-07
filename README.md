@@ -17,6 +17,14 @@ it can be easily deployed using docker compose and the commands guide below.
 ![screenshot](https://s4.uupload.ir/files/screen_shot_2021-12-08_at_10.24.29_am_5136.png)
 ![screenshot](https://s4.uupload.ir/files/screen_shot_2021-12-08_at_12.53.34_pm_zg8.png)
 - - - -
+#TODO
+- [ ] Redesign fronted
+- [ ] add epub reader
+- [ ] bookmarking option
+- [ ] add audio books & podcasts
+- [ ] add recommender system
+- [ ] add social network
+- [ ] add functionality for sharing progress with friends
 
 # Tools Used to develope this web-app🎯
 
